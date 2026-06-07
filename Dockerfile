@@ -12,6 +12,7 @@ RUN cd /opt/esp/idf && \
 	patch --ignore-whitespace -p1 -i "/app/tools/patches/sdcard-fix (esp-idf 4).diff"
 
 # Build
+# Build
 SHELL ["/bin/bash", "-c"]
-RUN python rg_tool.py --target esp32-s3-devkitc build && \
-    python rg_tool.py --target esp32-s3-devkitc build-img
+RUN python rg_tool.py --target esp32-s3-devkitc build
+RUN python rg_tool.py --target esp32-s3-devkitc build-img
