@@ -13,4 +13,5 @@ RUN cd /opt/esp/idf && \
 
 # Build
 SHELL ["/bin/bash", "-c"]
-RUN python rg_tool.py --target esp32-s3-devkitc release
+RUN python rg_tool.py --target esp32-s3-devkitc build && \
+    python rg_tool.py --target esp32-s3-devkitc build-img
